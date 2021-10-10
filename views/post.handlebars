@@ -1,0 +1,11 @@
+<div class="pt-3 text-center">
+  <h2 class="pb-3 ">{{post.description}}...</h2>
+  <p class="p-4">{{post.report}}</p>
+  <p class="pb-4">Created on: {{post.timeFiled}}</p>
+  
+  <p>
+    {{#if displayDeleteButton}}
+    <button class="btn btn-primary">Delete Post</button>
+    {{/if}}
+  </p>
+</div>

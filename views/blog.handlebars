@@ -1,0 +1,15 @@
+<h1 class="text-center pb-4">{{categoryName}} My Blog Posts</h1>
+
+{{#each posts as |post|}}
+<div class="d-flex px-3 justify-content-center row mb-2">
+    <div class="col-md-8">
+       
+        <div class="text-center">
+            <h2 class="pb-3"><a href="/blog/post/{{id}}">{{description}}</a></h2>
+            <p>Blog Post: {{report}}</p>          
+            <p>Created by {{user.username}} on {{format_date timeFiled}}</p>
+        </div>
+    </div>
+</div>
+<hr>
+{{/each}}

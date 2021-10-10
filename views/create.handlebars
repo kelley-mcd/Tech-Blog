@@ -1,0 +1,44 @@
+<section class="d-flex justify-content-center row">
+  <div class="col-auto">
+    <h2 class="pt-4">Create a Blog Post</h2>
+  </div>
+</section>
+
+<section class="ps-4 pt-5">
+    <form class="d-flex flex-wrap justify-content-evenly form new-sighting-form" id="sighting">
+      <div class="p-3 form-group">
+        <label for="sighting-report">Title</label>
+        <textarea class="form-input" id="sighting-report" name="sighting-report" required></textarea>
+      </div>
+      <div class="p-3 form-group">
+        <label for="sighting-description">Blog Post</label>
+        <textarea class="form-input" id="sighting-description" name="sighting-description" required></textarea>
+      </div>
+      <div class="p-3 pb-5 form-group">
+        <button type="submit" class="btn btn-primary">Post</button>
+      </div>
+    </form>
+  </div>
+
+ {{#if posts.length}}
+ <div class="col post-list">
+  <h3 class="d-flex justify-content-center pb-3">Current Report:</h3>
+
+  {{#each posts as |post|}}
+  <div class="d-flex mb-2 px-5">
+    <div class="col-md-8">
+      <h4><a>{{description}}</a></h4>
+      <p>Report: {{report}}</p>
+    </div>
+    <div class="col-md-4">
+      <button id= "delete_button" class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
+    </div>
+  </div>
+  <div class="pb-4">
+  </div>
+  {{/each}}
+ {{/if}}
+
+</section>
+
+<script src="./js/create.js"></script>
